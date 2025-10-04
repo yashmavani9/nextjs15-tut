@@ -38,6 +38,11 @@ export default async function DashboardRoute(){
 
     //why each time data fetching???
 
+    if (!user) {
+        // You can redirect or return a fallback UI here
+        return <div>User not found.</div>;
+    }
+
     const data = await getData(user.id);
 
 
